@@ -1,0 +1,14 @@
+.Container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 900px;
+  padding-bottom: 64px;
+}
+
+.Selector {
+  top: 64px;
+  z-index: 999;
+  padding: 32px 0;
+  position: sticky;
+  background: #eee;
+}

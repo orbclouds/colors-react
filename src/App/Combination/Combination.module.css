@@ -1,0 +1,25 @@
+.Container {
+  padding: 16px;
+  margin: 16px 0;
+  background: white;
+  border-radius: 16px;
+}
+
+.Heading {
+  text-transform: capitalize;
+}
+
+.Colors {
+  width: 100%;
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 568px) {
+  .Colors {
+    flex-direction: row;
+  }
+}
