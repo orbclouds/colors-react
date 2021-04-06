@@ -3,8 +3,10 @@
   height: 80px;
   position: relative;
   border-radius: 40px;
-  transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1),
-    background 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 1s
+      cubic-bezier(0.25, 0.1, 0.25, 1),
+    background 0.1s
+      cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .Container:hover {

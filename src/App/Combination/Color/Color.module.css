@@ -12,7 +12,8 @@
   position: relative;
   border-radius: 8px;
   border: solid 1px black;
-  transition: background 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: background 0.1s
+    cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .Color::after {
@@ -27,7 +28,8 @@
   align-items: center;
   justify-content: center;
   content: attr(data-color);
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 0.3s
+    cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .Color:hover::after {

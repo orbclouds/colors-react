@@ -4,33 +4,46 @@ import {
   useEffect,
   useCallback,
   MouseEventHandler,
-} from "react";
+} from 'react';
 
 interface Hooks {
   displayedColor: string;
-  copy(value: string): MouseEventHandler<HTMLButtonElement>;
+  copy(
+    value: string
+  ): MouseEventHandler<HTMLButtonElement>;
 }
 
-const useHooks = (color: string): Hooks => {
-  const timeout = useRef<null | ReturnType<typeof setTimeout>>(null);
-  const [displayedColor, setDisplayedColor] = useState(color);
+const useHooks = (
+  color: string
+): Hooks => {
+  const timeout = useRef<null | ReturnType<
+    typeof setTimeout
+  >>(null);
+  const [
+    displayedColor,
+    setDisplayedColor,
+  ] = useState(color);
 
   const copy = useCallback(
     (value: string) => async () => {
-      await navigator.clipboard.writeText(value);
-      setDisplayedColor("Copied!");
+      await navigator.clipboard.writeText(
+        value
+      );
+      setDisplayedColor('Copied!');
     },
     []
   );
 
   useEffect(() => {
-    if (timeout.current) clearTimeout(timeout.current);
+    if (timeout.current)
+      clearTimeout(timeout.current);
     timeout.current = setTimeout(() => {
       setDisplayedColor(color);
     }, 1 * 1000);
 
     return () => {
-      if (timeout.current) clearTimeout(timeout.current);
+      if (timeout.current)
+        clearTimeout(timeout.current);
     };
   }, [color, displayedColor]);
 

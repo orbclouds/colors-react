@@ -1,1 +1,1 @@
-export { default as default } from "./Orb.component";
+export { default as default } from './Orb.component';
