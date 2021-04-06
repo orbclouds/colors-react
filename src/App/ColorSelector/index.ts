@@ -1,3 +1,3 @@
-import type { ColorHandler } from './ColorSelector.component';
+import type { ColorHandler } from "./ColorSelector.component";
 export { ColorHandler };
-export { default as default } from './ColorSelector.component'
+export { default as default } from "./ColorSelector.component";

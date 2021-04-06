@@ -1,4 +1,10 @@
-import { useRef, useState, useEffect, useCallback, MouseEventHandler } from 'react';
+import {
+  useRef,
+  useState,
+  useEffect,
+  useCallback,
+  MouseEventHandler,
+} from "react";
 
 interface Hooks {
   displayedColor: string;
@@ -9,10 +15,13 @@ const useHooks = (color: string): Hooks => {
   const timeout = useRef<null | ReturnType<typeof setTimeout>>(null);
   const [displayedColor, setDisplayedColor] = useState(color);
 
-  const copy = useCallback((value: string) => async () => {
-    await navigator.clipboard.writeText(value);
-    setDisplayedColor('Copied!');
-  }, []);
+  const copy = useCallback(
+    (value: string) => async () => {
+      await navigator.clipboard.writeText(value);
+      setDisplayedColor("Copied!");
+    },
+    []
+  );
 
   useEffect(() => {
     if (timeout.current) clearTimeout(timeout.current);
@@ -22,10 +31,10 @@ const useHooks = (color: string): Hooks => {
 
     return () => {
       if (timeout.current) clearTimeout(timeout.current);
-    }
-  }, [color, displayedColor])
+    };
+  }, [color, displayedColor]);
 
   return { copy, displayedColor };
-}
+};
 
 export default useHooks;

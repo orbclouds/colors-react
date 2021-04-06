@@ -1,3 +1,3 @@
-import type { ComboDefinition } from './Combination.component';
+import type { ComboDefinition } from "./Combination.component";
 export { ComboDefinition };
-export { default as default } from './Combination.component';
+export { default as default } from "./Combination.component";

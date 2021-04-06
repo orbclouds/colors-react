@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 interface Hooks {
   show: boolean;
@@ -12,6 +12,6 @@ const useHooks = (): Hooks => {
   }, []);
 
   return { show };
-}
+};
 
 export default useHooks;

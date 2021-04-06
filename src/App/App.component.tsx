@@ -1,7 +1,7 @@
 import React from "react";
 import type { FC } from "react";
 
-import Orb from '@app/Orb';
+import Orb from "@app/Orb";
 
 import Combination from "./Combination";
 import ColorSelector from "./ColorSelector";

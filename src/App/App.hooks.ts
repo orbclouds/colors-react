@@ -1,6 +1,6 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback } from "react";
 
-import type { ColorHandler } from './ColorSelector';
+import type { ColorHandler } from "./ColorSelector";
 
 interface Hooks {
   color: string;
@@ -8,7 +8,7 @@ interface Hooks {
 }
 
 const useHooks = (): Hooks => {
-  const [color, setColor] = useState('#342EAD');
+  const [color, setColor] = useState("#342EAD");
   const updateColor: ColorHandler = useCallback(({ currentTarget }) => {
     const { value } = currentTarget as HTMLInputElement;
     setTimeout(() => {
